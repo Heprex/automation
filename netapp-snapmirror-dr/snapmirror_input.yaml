@@ -1,0 +1,82 @@
+# NetApp SnapMirror Configuration
+# Example configuration for multiple applications with volumes and qtrees
+
+---
+# Application 1 - With Qtrees
+- app_name: APP1
+  prod_cluster: prod-netapp.company.com
+  dr_cluster: dr-netapp.company.com
+  prod_vserver: prod_svm
+  dr_vserver: dr_svm
+  details: "Critical application with multiple volumes and qtrees"
+  volume_names:
+    - volume_name: app1_vol1
+      qtrees:
+        - qtree_name: qtree1
+          share_name: APP1_SHARE1
+        - qtree_name: qtree2
+          share_name: APP1_SHARE2
+    - volume_name: app1_vol2
+      qtrees:
+        - qtree_name: qtree1
+          share_name: APP1_SHARE3
+        - qtree_name: qtree2
+          share_name: APP1_SHARE4
+
+# Application 2 - Direct Volume Shares
+- app_name: APP2
+  prod_cluster: prod-netapp.company.com
+  dr_cluster: dr-netapp.company.com
+  prod_vserver: prod_svm
+  dr_vserver: dr_svm
+  details: "Application with direct volume shares"
+  volume_names:
+    - volume_name: app2_vol1
+      share_name: APP2_SHARE1
+    - volume_name: app2_vol2
+      share_name: APP2_SHARE2
+
+# Application 3 - Mixed Configuration
+- app_name: APP3
+  prod_cluster: prod-netapp.company.com
+  dr_cluster: dr-netapp.company.com
+  prod_vserver: prod_svm
+  dr_vserver: dr_svm
+  details: "Mixed configuration with both qtrees and direct shares"
+  volume_names:
+    - volume_name: app3_vol1
+      share_name: APP3_SHARE1
+    - volume_name: app3_vol2
+      qtrees:
+        - qtree_name: qtree1
+          share_name: APP3_SHARE2
+        - qtree_name: qtree2
+          share_name: APP3_SHARE3
+
+# Application 4 - No Shares
+- app_name: APP4
+  prod_cluster: prod-netapp.company.com
+  dr_cluster: dr-netapp.company.com
+  prod_vserver: prod_svm
+  dr_vserver: dr_svm
+  details: "Application volumes without shares"
+  volume_names:
+    - volume_name: app4_vol1
+    - volume_name: app4_vol2
+
+# Application 5 - Single Volume with Multiple Qtrees
+- app_name: APP5
+  prod_cluster: prod-netapp.company.com
+  dr_cluster: dr-netapp.company.com
+  prod_vserver: prod_svm
+  dr_vserver: dr_svm
+  details: "Single volume with multiple qtrees"
+  volume_names:
+    - volume_name: app5_vol1
+      qtrees:
+        - qtree_name: qtree1
+          share_name: APP5_SHARE1
+        - qtree_name: qtree2
+          share_name: APP5_SHARE2
+        - qtree_name: qtree3
+          share_name: APP5_SHARE3
