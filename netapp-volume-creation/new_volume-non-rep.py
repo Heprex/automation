@@ -556,7 +556,7 @@ if __name__ == "__main__":
                             f"Volume Details:\n"
                             f"- Total Capacity: {size}, with {percent_snapshot}% reserved for snapshots.\n"
                             f"- Snapshot Policy Applied: {snapshot_policy}\n\n"
-                            f"By default, permission is set to Everyone, a sibling task will be created to EEE - RF - Directory Services "
+                            f"By default, permission is set to Everyone, a sibling task will be created to GROUP"
                             f"to restrict permission once the NAS task is closed.\n"
                             f"Also, please be advised that we do not manage copying data. You may raise a request with the Windows team."
                         )
