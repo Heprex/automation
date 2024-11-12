@@ -10,8 +10,6 @@ This repository provides a script to automate SnapMirror management across NetAp
 - Supports parallel data fetching for improved efficiency when loading SnapMirror details.
 - Logs actions with user details and timestamp to a shared network file, maintaining a history of operations.
 
-![Alt text](/other_test_files/images/nas-dr.png)
-
 
 ## Prerequisites
 

@@ -13,7 +13,7 @@ from termcolor import colored
 from colorama import init
 init()
 
-RECENT_ACTIONS_FILE = r"\\svrau227trs00.oceania.corp.anz.com\EnterpriseStorage\NAS\NAS_automation\NOV-DR\recent_actions_log.yaml"
+RECENT_ACTIONS_FILE = r"\\hostname.domain\recent_actions_log.yaml"
 
 # Define valid actions
 VALID_ACTIONS = [
