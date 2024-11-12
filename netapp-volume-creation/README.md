@@ -22,7 +22,7 @@ This script automates the creation of a volume on a NetApp ONTAP cluster, includ
 
 1. Install required Python packages:
    ```bash
-   pip install paramiko netapp-ontap
+   pip3 install paramiko netapp-ontap
    ```
 
 2. Configure access to the ONTAP cluster and ensure permissions for volume and export management.
@@ -40,7 +40,7 @@ This script automates the creation of a volume on a NetApp ONTAP cluster, includ
 
 Run the script from a terminal with Python 3:
 ```bash
-python new_volume-non-rep.py
+python3 new_volume-non-rep.py
 ```
 
 ### Prompted Parameters

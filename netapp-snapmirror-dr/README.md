@@ -26,7 +26,7 @@ This repository provides a script to automate SnapMirror management across NetAp
 
 Install the required packages with:
 ```bash
-pip install paramiko tzlocal termcolor colorama PyYAML tabulate getpass4
+pip3 install paramiko tzlocal termcolor colorama PyYAML tabulate getpass4 pytz
 ```
 
 ## Getting Started
@@ -76,7 +76,7 @@ Create a YAML input file named `snapmirror_input.yaml` to define applications, c
 Ensure `snapmirror_input.yaml` is in the same directory as the script. Then, run the script:
 
 ```bash
-python nas-dr.py
+python3 nas-dr.py
 ```
 
 Upon starting, you will be prompted to enter your username and password for SSH connections. The script then loads and displays SnapMirror tables, allowing you to select an application and specify an action.
